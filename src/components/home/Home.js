@@ -1,5 +1,5 @@
 import Modal from 'react-modal';
-import React from 'react'
+import React, {useState} from 'react'
 import './Home.css'
 import HomeLoginCart from './HomeLoginCart'
 // import GroupsIcon from '@mui/icons-material/Groups';
@@ -31,20 +31,33 @@ const customStyles = {
 Modal.setAppElement(document.getElementsByClassName('homebottom'));
 
 export default function Home() {
+
+  const [userId, setUserId] = useState('')
+  const [userPassword, setUserPassword] = useState('')
   let subtitle;
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
   const openModal = ()=> {
     setIsOpen(true);
   }
-  const afterOpenModal = ()=> {
-    // references are now sync'd and can be accessed.
-    subtitle.style.color = '#f00';
-  }
+  // const afterOpenModal = ()=> {
+  //   // references are now sync'd and can be accessed.
+  //   subtitle.style.color = '#f00';
+  // }
 
   const closeModal = ()=> {
     setIsOpen(false);
   }
+
+  const handleLogin = (e) =>{
+    e.preventDefault();
+    console.log(userId)
+    console.log(userPassword)
+    setUserId('')
+    setUserPassword('')
+    closeModal()
+  }
+
   return (
     <>
     <div className='home_login'>
@@ -54,9 +67,9 @@ export default function Home() {
         </div>
         <div className="homeBottom">
           <HomeLoginCart openModal={openModal} icon={group} text='Student Login'/>
-          <HomeLoginCart  icon={dep} text='Teacher Login'/>
-          <HomeLoginCart  icon={school} text='School Login'/>
-          <HomeLoginCart icon={write} text='Unregistered Student'/>
+          <HomeLoginCart openModal={openModal}  icon={dep} text='Teacher Login'/>
+          <HomeLoginCart openModal={openModal}  icon={school} text='School Login'/>
+          <HomeLoginCart  icon={write} text='Unregistered Student'/>
           {/* <HomeLoginCart Icon = {GroupsIcon} text=/>
           <HomeLoginCart Icon = {AccountBalanceIcon} text=/>
           <HomeLoginCart Icon = {SchoolIcon} text=/>
@@ -68,17 +81,23 @@ export default function Home() {
       
       <Modal
         isOpen={modalIsOpen}
-        onAfterOpen={afterOpenModal}
+        // onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
         style={customStyles}
+        // className={'homeModel'}
         contentLabel="Example Modal"
       >
+        {/* <div className='homeLoginModel'> */}
+          <h3>Login Here</h3>
+          <form className='loginForm'>
+            {/* <div> */}
+              <label htmlFor="id">Id</label><input onChange={(e)=>{setUserId(e.target.value) }} type="text" value={userId} name="userId" id="id" />
+              <label htmlFor="password">Password</label><input onChange={(e)=>{setUserPassword(e.target.value) }} type="password" value={userPassword} name="password" id="password" />
+            {/* </div> */}
+            <button onClick={(e)=>{handleLogin(e)}}>Login</button>
+          </form>
+        {/* </div> */}
         
-        <button onClick={closeModal}>close</button>
-        <div>I am a modal</div>
-        <form>
-          hii
-        </form>
       </Modal>
     </div>
     </>
