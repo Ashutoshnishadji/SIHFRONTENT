@@ -1,3 +1,10 @@
 http://localhost:3000/students
 
 http://localhost:3000/Profile
+
+http://localhost:3000/teacher
+http://localhost:3000/subjectpage
+
+helliow ✌👇✌✌👇👇👆
+yrr
+sunna
