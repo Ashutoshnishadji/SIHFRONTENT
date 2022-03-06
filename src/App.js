@@ -8,6 +8,7 @@ import Profile from "./components/StudentPage/Profile";
 import StudentPage from "./components/StudentPage/StudentPage";
 import LineChart from "./charts/LineChart";
 import SubjectPage from "./components/SubjectPage/SubjectPage";
+import TeacherPage from "./components/TeacherPage/TeacherPage"
 function App() {
   return (
     <Router>
@@ -50,7 +51,28 @@ function App() {
               </>
             }
           />
+          <Route
+            exact
+            path="/teacher"
+            element={
+              <>
+             
+                <TeacherPage/>
+              </>
+            }
+          />
+              <Route
+            exact
+            path="/subjectpage"
+            element={
+              <>
+             
+                <SubjectPage/>
+              </>
+            }
+          />
         </Routes>
+        
       </div>
     </Router>
   );

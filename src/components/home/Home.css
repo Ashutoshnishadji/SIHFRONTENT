@@ -56,3 +56,20 @@
     /* justify-content: space-evenly; */
     /* border: 2px solid green; */
 }
+
+.homeLoginModel{
+    border: 1px solid red;
+}
+
+.ReactModal__Content{
+    border: 1px solid green !important;
+    background-color: rgba(255, 255, 255, 0.247) !important;
+    /* background-image: linear-gradient(rgba(89, 210, 247, 0.562), rgba(58, 58, 223, 0.575)) !important; */
+}
+
+.ReactModal__Overlay.ReactModal__Overlay--after-open{
+    /* background-color: rgba(71, 71, 71, 0.603) !important; */
+    /* opacity: 0.6; */
+    /* border: 10px solid blue; */
+    background-image: linear-gradient(rgba(89, 210, 247, 0.562), rgba(58, 58, 223, 0.575)) !important;
+}

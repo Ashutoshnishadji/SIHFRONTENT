@@ -54,9 +54,9 @@ export default function Home() {
         </div>
         <div className="homeBottom">
           <HomeLoginCart openModal={openModal} icon={group} text='Student Login'/>
-          <HomeLoginCart  icon={dep} text='Teacher Login'/>
-          <HomeLoginCart  icon={school} text='School Login'/>
-          <HomeLoginCart icon={write} text='Unregistered Student'/>
+          <HomeLoginCart openModal={openModal}  icon={dep} text='Teacher Login'/>
+          <HomeLoginCart openModal={openModal}  icon={school} text='School Login'/>
+          <HomeLoginCart  icon={write} text='Unregistered Student'/>
           {/* <HomeLoginCart Icon = {GroupsIcon} text=/>
           <HomeLoginCart Icon = {AccountBalanceIcon} text=/>
           <HomeLoginCart Icon = {SchoolIcon} text=/>
@@ -71,14 +71,18 @@ export default function Home() {
         onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
         style={customStyles}
+        // className={'homeModel'}
         contentLabel="Example Modal"
       >
+        <div className='homeLoginModel'>
+          <h3>Login</h3>
+          <form>
+            <label htmlFor="id">Id</label><input type="email" name="id" id="id" />
+            <label htmlFor="password">Password</label><input type="password" name="password" id="password" />
+            <button onClick={closeModal}>Login</button>
+          </form>
+        </div>
         
-        <button onClick={closeModal}>close</button>
-        <div>I am a modal</div>
-        <form>
-          hii
-        </form>
       </Modal>
     </div>
     </>

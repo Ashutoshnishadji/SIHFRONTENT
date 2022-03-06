@@ -1,0 +1,82 @@
+.teacherPageContainer {
+  margin: 20px auto;
+  width: 80%;
+}
+
+.profile {
+  padding: 10px 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  align-items: center;
+
+  display: flex;
+  flex-direction: row;
+}
+.info,
+.image {
+  width: 48%;
+}
+.info {
+  height: 160px;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+
+  /* justify-content: space-between; */
+  align-items: flex-start;
+}
+.fields {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4px;
+}
+.profileImage {
+  object-fit: contain;
+  max-height: 150px;
+}
+
+.tasks {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 9px;
+  align-content: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px 40px;
+}
+.optionBtn{
+    font-size: 15px !important;
+}
+/* .optionBtn:hover{
+  background-color: #257dd4;
+    color: white;
+    box-shadow: #257dd4 0px 1px 13px 1px;
+} */
+.classGraphs{
+  display: flex;
+  flex-direction: row;
+  box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+  align-items: center;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+    
+}
+.title{
+    margin:10px 20px;
+}
+.class_info_teacher_profile{
+
+}
+.pieChartContainer{
+  flex: 0.3;
+  border: 3px solid red !important;
+  width: 300px !important;
+  /* height: 300px !important; */
+  
+}
+
