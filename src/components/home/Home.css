@@ -62,9 +62,39 @@
 }
 
 .ReactModal__Content{
-    border: 1px solid green !important;
-    background-color: rgba(255, 255, 255, 0.247) !important;
-    /* background-image: linear-gradient(rgba(89, 210, 247, 0.562), rgba(58, 58, 223, 0.575)) !important; */
+    background-color: none !important;
+    background-image: linear-gradient(#b4d9f8,rgba(94, 116, 241, 0.541)) !important ;
+    border: none !important;
+    padding: 0 !important;
+    display: flex;
+    box-sizing: border-box;
+    height: fit-content !important;
+    padding-bottom: 2rem !important;
+    flex-direction: column;
+    /* border: 1px solid green !important; */
+    box-shadow: 0px 0px 12px rgba(69, 79, 92, 0.459);
+}
+
+.ReactModal__Content > h3 {
+    /* display: inline-block; */
+    margin: 0;
+    font-size: 22px;
+    color: #fbfbfb;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* margin-left: 1.3rem; */
+    height: 40px;
+    width: 100%;
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    /* border-top-left-radius: 5px;
+    border-top-right-radius: 5px; */
+    box-sizing: border-box;
+    /* padding: 0 1rem; */
+    padding: 0 !important;
+    background-color: #37495f;
+    /* background-color: red; */
 }
 
 .ReactModal__Overlay.ReactModal__Overlay--after-open{
@@ -73,3 +103,60 @@
     /* border: 10px solid blue; */
     background-image: linear-gradient(rgba(89, 210, 247, 0.562), rgba(58, 58, 223, 0.575)) !important;
 }
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    flex: 1;
+    /* border: 1px solid green; */
+}
+
+.loginForm>  label{
+    font-size: 18px;
+    color: #37495f;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 2px;
+    width: fit-content;
+}
+
+.loginForm>input{
+    height: 20px;
+    color: rgba(36, 64, 97, 0.932) ;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #4e89b98a;
+    border-radius: 3px;
+    font-size: 15px;
+    outline-color: rgba(114, 89, 51, 0.644);
+    padding: 0.4rem 1rem;
+    border: none;
+    outline: none;
+    /* border: 1px solid rgba(70, 169, 235, 0.644); */
+    margin-bottom: 1rem;
+    /* margin-left:auto; */
+}
+
+.loginForm>input:focus-within{
+    outline: 2px solid #2682ced2;
+    /* transform: scale(101%); */
+}
+
+.loginForm > button{
+    /* height: 33px; */
+    margin-top: 1rem;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 0.4rem 1rem;
+    background-color: #486fae;
+    border: none;
+    border-radius: 3px;
+    color: #fbfbfb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.loginForm> button:hover{
+    background-color: #3866b1;
+}
+
