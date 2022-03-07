@@ -9,7 +9,9 @@ import StudentPage from "./components/StudentPage/StudentPage";
 import LineChart from "./charts/LineChart";
 import SubjectPage from "./components/SubjectPage/SubjectPage";
 import TeacherPage from "./components/TeacherPage/TeacherPage"
+import Student from "./components/student/Student"
 function App() {
+
   return (
     <Router>
       <div className="app">
@@ -21,6 +23,33 @@ function App() {
             element={
               <>
                 <Home />{" "}
+              </>
+            }
+          />
+          <Route
+            exact
+            path="/student/:admissionNo}"
+            element={
+              <>
+                <Student/>
+              </>
+            }
+          />
+          <Route
+            exact
+            path="/teacher/:userId"
+            element={
+              <>
+                {/* <h1>teacher {userId}</h1> */}
+              </>
+            }
+          />
+          <Route
+            exact
+            path="/school/:diceCode"
+            element={
+              <>
+                {/* <h1>school {diceCode}</h1> */}
               </>
             }
           />
@@ -44,7 +73,7 @@ function App() {
           />
           <Route
             exact
-            path="/subjectpage"
+            path="/subjectpages"
             element={
               <>
                 <SubjectPage />
@@ -53,7 +82,7 @@ function App() {
           />
           <Route
             exact
-            path="/teacher"
+            path="/teachers"
             element={
               <>
              
@@ -61,16 +90,7 @@ function App() {
               </>
             }
           />
-              <Route
-            exact
-            path="/subjectpage"
-            element={
-              <>
-             
-                <SubjectPage/>
-              </>
-            }
-          />
+
         </Routes>
         
       </div>
